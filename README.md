@@ -22,13 +22,22 @@ For detailed setup instructions, please refer to the documentation folder.
 
 # Software Installation Guide
 - **ESP32 Programming**: Follow this link for a guide on programming the ESP32 using PlatformIO and Visual Studio Code: [YouTube Setup Guide](https://www.youtube.com/watch?app=desktop&v=nlE2203Q3XI)
+- Python programming: Download Python and some libraries needed for the program: 
+	+ `Python` 3.12.7
+	+ `SpeechRecognition` 3.10.4
+	+ `Flask` 3.0.3
+	+ `pydub` 0.25.1
+	+ `gTTS` 2.5.3
+	+ `google-generativeai` 0.8.2
 
 # Usage Instructions
+- Setup before running: Check your PC's IP address (run this command on windows terminal: `for /f "tokens=14" %i in ('ipconfig ^| findstr /i "IPv4"') do @echo %i`), then edit the `hostIP` variable in the `secret.h` file trong thư mục Source/ESP32/include to match this IP. Also, update the Wi-Fi credentials to match your home network information. Bước tiếp theo là lấy API key để sử dụng geminiAI (truy cập đường dẫn sau: https://aistudio.google.com/app/apikey), sau khi có được API key thì dán API key đó vào file Secret.py trong thư mục Source/PC
+- First, run the Python program on the PC to receive HTTP requests from the ESP32.
 - Power the ESP32 device using a micro-USB cable.
 - Monitor logs via Serial Monitor (Arduino IDE), Monitor (PlatformIO), or Hercules software.
 - When the log displays "Ready to record: Waiting for button press," the device is ready to record.
 - Press and hold the button to start recording. Release the button after finishing the command (an LED light will indicate that recording is in progress).
-- Wait briefly; the response will then play through the speaker.
+- Wait briefly; the response will then play through the speaker (monitor logs to see if any error happened).
 
 # Contact and Contributions
 Feel free to contact me via email: quypham26062002@gmail.com
