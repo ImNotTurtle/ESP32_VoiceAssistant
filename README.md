@@ -45,5 +45,10 @@ For detailed setup instructions, please refer to the documentation folder.
 # Demo
 - See this link for demo: https://drive.google.com/file/d/1TJHBl-jF2sWs7FwNDodI1zHmuJNNuQMu/view?usp=sharing
 
+# Outstanding Issues and Future Development Directions
+- Outstanding Issues: When the response is sent from the PC to the ESP32 and played through the speaker, the sound remains low, and there are significant noise artifacts at the end of the playback. Basic filtering techniques have been attempted but have not resolved the issue.
+
+- Future Development Directions: Integrate the system into an application and server to enable remote voice response tasks, or improve the program's functionality to perform smart IoT tasks, such as turning lights on/off via voice commands (similar to Alexa).
+
 # Contact and Contributions
 Feel free to contact me via email: quypham26062002@gmail.com
