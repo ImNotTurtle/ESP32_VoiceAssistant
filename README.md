@@ -4,6 +4,9 @@
 - **Project Overview**: This project focuses on a voice-controlled virtual assistant using GeminiAI and ESP32. For more detailed information, please refer to the documentation folder.
 - **Project Goals and Applications**: The objective is to build a virtual assistant leveraging GeminiAI and the ESP32 device to enable users to perform tasks through voice commands, aiding in information retrieval and response.
 
+# Demo
+- See this link for demo: https://drive.google.com/file/d/1TJHBl-jF2sWs7FwNDodI1zHmuJNNuQMu/view?usp=sharing
+
 # Usage Instructions
 - **Setup before running**: Check your PC's IP address (run this command on Windows Terminal: `for /f "tokens=14" %i in ('ipconfig ^| findstr /i "IPv4"') do @echo %i`), then edit the `hostIP` variable in the `secret.h` file in the `Source/ESP32/include` directory to match this IP. Also, update the Wi-Fi credentials to match your home network information. Next, obtain the API key for GeminiAI usage (visit this link: https://aistudio.google.com/app/apikey), and paste the API key into the `Secret.py` file in the `Source/PC` directory.
 - First, run the Python program on the PC to receive HTTP requests from the ESP32.
@@ -41,9 +44,6 @@ For detailed setup instructions, please refer to the documentation folder.
 
 # Limitations
 - With an SRAM size of 520KB, it is insufficient to store a long recording or a complete response voice file. Therefore, the recording time is limited to 20 seconds (corresponding to a maximum storage size of 320KB for recording), and the maximum size for the response is approximately 80KB (equivalent to a maximum of 20 words in the response). This limitation is defined in the constant `PROMPT_PARAMS` in the PC's source code and is appended to the prompt before being sent to GeminiAI.
-
-# Demo
-- See this link for demo: https://drive.google.com/file/d/1TJHBl-jF2sWs7FwNDodI1zHmuJNNuQMu/view?usp=sharing
 
 # Outstanding Issues and Future Development Directions
 - Outstanding Issues: When the response is sent from the PC to the ESP32 and played through the speaker, the sound remains low, and there are significant noise artifacts at the end of the playback. Basic filtering techniques have been attempted but have not resolved the issue.
